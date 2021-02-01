@@ -36,17 +36,19 @@ namespace SQLiteDb
         }
 
     }
-
     public class calificaciones
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int Calificacion { get; set; }
+        public int Matricula { get; set; }
+        public double Calificacion { get; set; }
 
-        public calificaciones(string nombre, string apellido, int calificacion)
+
+        public calificaciones(string nombre, string apellido,int matricula,double calificacion)
         {
             Nombre = nombre;
             Apellido = apellido;
+            Matricula = matricula;
             Calificacion = calificacion;
         }
     }
@@ -96,7 +98,7 @@ namespace SQLiteDb
                             +"FROM CALIFICACIONES "
                             +"INNER JOIN ALUMNOS ON "
                             +"(ALUMNOS.MATRICULA = CALIFICACIONES.ALUMNOid) "
-                            +"WHERE CALIFICACION> 69 "
+                            +"WHERE CALIFICACION>0 "
                             +"GROUP BY MATRICULA "
                             +"ORDER BY CALIFICACION ";
             List<calificaciones> lista_calificaciones = new List<calificaciones>();
@@ -104,7 +106,7 @@ namespace SQLiteDb
             {
                 while (rs.NextRecord())
                 {
-                    lista_calificaciones.Add(new calificaciones(rs.GetString("NOMBRE"), rs.GetString("APELLIDO"), rs.GetInt32("CALIFICACION")));
+                    lista_calificaciones.Add(new calificaciones(rs.GetString("NOMBRE"), rs.GetString("APELLIDO"), rs.GetInt32("MATRICULA"), rs.GetDouble("CALIFICACION")));
                 }
             }
             return lista_calificaciones;
