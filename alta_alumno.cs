@@ -17,6 +17,7 @@ namespace ControlEscolar
         {
             InitializeComponent();
             this.conexion = conexion;
+            error.Visible = false;
         }
 
         private void name_box_TextChanged(object sender, EventArgs e)
@@ -39,6 +40,10 @@ namespace ControlEscolar
             if (!String.IsNullOrEmpty(nombre) && !String.IsNullOrEmpty(apellido) && !String.IsNullOrEmpty(matricula))
             {
              conexion.agregar_alumno(nombre, apellido, Convert.ToInt32(matricula));
+            }
+            else {
+                //Si no estan llenos, muestra el aviso de error en pantalla 
+                error.Visible = true;
             }
 
         }

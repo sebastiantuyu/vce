@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.agregar = new System.Windows.Forms.Button();
+            this.error = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nombre_box
@@ -64,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 35);
+            this.label1.Location = new System.Drawing.Point(31, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 24);
             this.label1.TabIndex = 3;
@@ -112,11 +113,23 @@
             this.agregar.UseVisualStyleBackColor = true;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
+            // error
+            // 
+            this.error.AutoSize = true;
+            this.error.ForeColor = System.Drawing.Color.Red;
+            this.error.Location = new System.Drawing.Point(32, 60);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(124, 13);
+            this.error.TabIndex = 8;
+            this.error.Text = "¡Llene todos los campos!";
+            this.error.Visible = false;
+            // 
             // alta_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(311, 291);
+            this.Controls.Add(this.error);
             this.Controls.Add(this.agregar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -144,5 +157,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button agregar;
+        private System.Windows.Forms.Label error;
     }
 }

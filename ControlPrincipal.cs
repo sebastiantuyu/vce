@@ -47,7 +47,8 @@ namespace ControlEscolar
         // Dar de alta un alumno
         private void alta_alumnos_Click(object sender, EventArgs e)
         {
-
+            alta_alumno form = new alta_alumno(conexion);
+            form.ShowDialog();
         }
 
         // Modificar calificaciones de un alumno
