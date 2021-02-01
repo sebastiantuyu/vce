@@ -17,8 +17,15 @@ namespace ControlEscolar
         {
             InitializeComponent();
             this.conexion = conexion;
-            //Cargar informacion
-            alumno_box.DisplayMember = ""
+            //Cargar informacion alumnos
+            alumno_box.DisplayMember = "Matricula";
+            alumno_box.ValueMember = "Nombre";
+            alumno_box.DataSource = conexion.leer_alumnos();
+
+            //Cargar informacion materias
+            materia_box.DisplayMember = "nombre";
+            materia_box.ValueMember = "clave";
+            materia_box.DataSource = conexion.leer_materias();
         }
 
         private void label1_Click(object sender, EventArgs e)
