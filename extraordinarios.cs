@@ -23,5 +23,10 @@ namespace ControlEscolar
         {
             data_extra.DataSource = conexion.leer_extraordinarios();
         }
+
+        private void data_extra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

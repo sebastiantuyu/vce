@@ -39,16 +39,16 @@
             // data_materias
             // 
             this.data_materias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_materias.Location = new System.Drawing.Point(27, 107);
+            this.data_materias.Location = new System.Drawing.Point(12, 131);
             this.data_materias.Name = "data_materias";
-            this.data_materias.Size = new System.Drawing.Size(240, 150);
+            this.data_materias.Size = new System.Drawing.Size(450, 313);
             this.data_materias.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 22);
+            this.label1.Location = new System.Drawing.Point(118, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 24);
             this.label1.TabIndex = 1;
@@ -57,7 +57,7 @@
             // data_alumnos
             // 
             this.data_alumnos.FormattingEnabled = true;
-            this.data_alumnos.Location = new System.Drawing.Point(38, 49);
+            this.data_alumnos.Location = new System.Drawing.Point(122, 73);
             this.data_alumnos.Name = "data_alumnos";
             this.data_alumnos.Size = new System.Drawing.Size(121, 21);
             this.data_alumnos.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             this.matricula.AutoSize = true;
             this.matricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matricula.Location = new System.Drawing.Point(35, 73);
+            this.matricula.Location = new System.Drawing.Point(119, 97);
             this.matricula.Name = "matricula";
             this.matricula.Size = new System.Drawing.Size(81, 18);
             this.matricula.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             // obtener
             // 
-            this.obtener.Location = new System.Drawing.Point(192, 49);
+            this.obtener.Location = new System.Drawing.Point(295, 73);
             this.obtener.Name = "obtener";
             this.obtener.Size = new System.Drawing.Size(75, 42);
             this.obtener.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 278);
+            this.ClientSize = new System.Drawing.Size(474, 456);
             this.Controls.Add(this.obtener);
             this.Controls.Add(this.matricula);
             this.Controls.Add(this.data_alumnos);

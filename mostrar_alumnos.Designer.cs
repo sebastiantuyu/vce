@@ -39,7 +39,7 @@
             this.data_alumnos.Location = new System.Drawing.Point(12, 65);
             this.data_alumnos.Name = "data_alumnos";
             this.data_alumnos.ReadOnly = true;
-            this.data_alumnos.Size = new System.Drawing.Size(455, 374);
+            this.data_alumnos.Size = new System.Drawing.Size(450, 379);
             this.data_alumnos.TabIndex = 0;
             // 
             // label1
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 451);
+            this.ClientSize = new System.Drawing.Size(474, 456);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.data_alumnos);
             this.Name = "mostrar_alumnos";
