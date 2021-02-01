@@ -22,6 +22,15 @@ namespace ControlEscolar
         }
 
         // Controles basicos: cerrar programa
+        private void exit_Click(object sender, EventArgs e)
+        {
+            //Cerrar conexion base de datos
+            conection.Close();
+            // Cerrar programa
+            Close();
+        }
+
+        
 
     }
 }
