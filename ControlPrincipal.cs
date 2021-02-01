@@ -80,7 +80,8 @@ namespace ControlEscolar
         //Mostrar extraordinarios
         private void extraordinarios_Click(object sender, EventArgs e)
         {
-
+            extraordinarios form = new extraordinarios(conexion);
+            form.ShowDialog();
         }
 
         //Muestra texto de ayuda: alumnos existentes

@@ -30,5 +30,6 @@ namespace ControlEscolar
 
         public List<calificaciones> leer_promedio_parcial() => conn.leer_promedio_parcial();
 
+        public List<materia> leer_extraordinarios() => conn.leer_extraordinarios();
     }
 }

@@ -12,9 +12,16 @@ namespace ControlEscolar
 {
     public partial class extraordinarios : Form
     {
-        public extraordinarios()
+        private Conexion conexion;
+        public extraordinarios(Conexion conexion)
         {
             InitializeComponent();
+            this.conexion = conexion;
+        }
+
+        private void extraordinarios_Load(object sender, EventArgs e)
+        {
+            data_extra.DataSource = conexion.leer_extraordinarios();
         }
     }
 }

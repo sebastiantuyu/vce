@@ -53,6 +53,18 @@ namespace SQLiteDb
         }
     }
 
+    public class materia
+    {
+        public string Nombre { get; }
+        public int Data { get; }
+
+        public materia(string nombre, int data)
+        {
+            Nombre = nombre;
+            Data = data;
+        }
+    }
+
     public partial class SQLiteConn
     {
         // Metodos para el manejo de datos
@@ -135,6 +147,27 @@ namespace SQLiteDb
             }
             return lista_calificaciones;
 
+        }
+
+        public List<materia> leer_extraordinarios()
+        {
+            string query = "SELECT MATERIAS.MATERIA AS MATERIA, "
+                            + "COUNT(CALIFICACIONES.CALIFICACION) AS EXTRAORDINARIOS "
+                            + "FROM MATERIAS "
+                            + "INNER JOIN CALIFICACIONES ON "
+                            + "(MATERIAS.CLAVE = CALIFICACIONES.MATERIAid) "
+                            + "WHERE CALIFICACIONES.CALIFICACION < 69 "
+                            + "AND CALIFICACIONES.CALIFICACION > 0 "
+                            + "GROUP BY MATERIAS.CLAVE ";
+            List<materia> lista_materia = new List<materia>();
+            using (SQLiteRecordSet rs = ExecuteQuery(query))
+            {
+                while (rs.NextRecord())
+                {
+                    lista_materia.Add(new materia(rs.GetString("MATERIA"),rs.GetInt32("EXTRAORDINARIOS")));
+                }
+            }
+            return lista_materia;
         }
     }
 }

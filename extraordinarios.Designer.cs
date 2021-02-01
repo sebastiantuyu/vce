@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.data_extra = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_extra)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // data_extra
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.data_extra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_extra.Location = new System.Drawing.Point(29, 99);
+            this.data_extra.Name = "data_extra";
+            this.data_extra.Size = new System.Drawing.Size(240, 150);
+            this.data_extra.TabIndex = 0;
             // 
             // label1
             // 
@@ -57,12 +57,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 436);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.data_extra);
             this.MaximizeBox = false;
             this.Name = "extraordinarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Extraordinarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.extraordinarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.data_extra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,7 +71,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView data_extra;
         private System.Windows.Forms.Label label1;
     }
 }
