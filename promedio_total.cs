@@ -12,9 +12,16 @@ namespace ControlEscolar
 {
     public partial class promedio_total : Form
     {
-        public promedio_total()
+        private Conexion conexion;
+        public promedio_total(Conexion conexion)
         {
             InitializeComponent();
+            this.conexion = conexion;
+        }
+
+        private void promedio_total_Load(object sender, EventArgs e)
+        {
+            data_promedio.DataSource = conexion.leer_promedio_total();
         }
     }
 }

@@ -26,6 +26,8 @@ namespace ControlEscolar
 
         public List<materias> leer_materias() => conn.leer_materias();
 
+        public List<calificaciones> leer_promedio_total() => conn.leer_promedio_total();
+
 
     }
 }

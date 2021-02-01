@@ -62,6 +62,7 @@
             this.Name = "promedio_total";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promedio total";
+            this.Load += new System.EventHandler(this.promedio_total_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_promedio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

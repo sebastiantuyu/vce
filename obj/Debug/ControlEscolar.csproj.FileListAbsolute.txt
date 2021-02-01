@@ -11,3 +11,9 @@ C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.csproj.Co
 C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.exe
 C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.pdb
 C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.mostrar_alumnos.resources
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.alta_alumno.resources
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.extraordinarios.resources
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.materias_adeudadas.resources
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.mostrar_materias.resources
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.promedio_parcial.resources
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.promedio_total.resources

@@ -37,6 +37,20 @@ namespace SQLiteDb
 
     }
 
+    public class calificaciones
+    {
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Calificacion { get; set; }
+
+        public calificaciones(string nombre, string apellido, int calificacion)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            Calificacion = calificacion;
+        }
+    }
+
     public partial class SQLiteConn
     {
         // Metodos para el manejo de datos
@@ -72,5 +86,30 @@ namespace SQLiteDb
             }
             return lista_materias;
         }
+        
+        //Leer el promedio total de cada alumno
+        public List<calificaciones> leer_promedio_total()
+        {
+            string query = "SELECT ALUMNOS.NOMBRE,ALUMNOS.APELLIDO, "
+                            +"CALIFICACIONES.ALUMNOid AS MATRICULA, "
+                            +"AVG(CALIFICACIONES.CALIFICACION) AS CALIFICACION "
+                            +"FROM CALIFICACIONES "
+                            +"INNER JOIN ALUMNOS ON "
+                            +"(ALUMNOS.MATRICULA = CALIFICACIONES.ALUMNOid) "
+                            +"WHERE CALIFICACION> 69 "
+                            +"GROUP BY MATRICULA "
+                            +"ORDER BY CALIFICACION ";
+            List<calificaciones> lista_calificaciones = new List<calificaciones>();
+            using (SQLiteRecordSet rs = ExecuteQuery(query))
+            {
+                while (rs.NextRecord())
+                {
+                    lista_calificaciones.Add(new calificaciones(rs.GetString("NOMBRE"), rs.GetString("APELLIDO"), rs.GetInt32("CALIFICACION")));
+                }
+            }
+            return lista_calificaciones;
+
+        }
+            
     }
 }

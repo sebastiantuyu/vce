@@ -77,6 +77,18 @@
     <Compile Include="ControlPrincipal.Designer.cs">
       <DependentUpon>ControlPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="extraordinarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="extraordinarios.Designer.cs">
+      <DependentUpon>extraordinarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="materias_adeudadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="materias_adeudadas.Designer.cs">
+      <DependentUpon>materias_adeudadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="mostrar_alumnos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlPrincipal.resx">
       <DependentUpon>ControlPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="extraordinarios.resx">
+      <DependentUpon>extraordinarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="materias_adeudadas.resx">
+      <DependentUpon>materias_adeudadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mostrar_alumnos.resx">
       <DependentUpon>mostrar_alumnos.cs</DependentUpon>
