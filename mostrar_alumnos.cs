@@ -22,7 +22,7 @@ namespace ControlEscolar
 
         private void mostrar_alumnos_Load(object sender, EventArgs e)
         {
-            data_alumnos.DataSource = conexion.obtener_alumnos();
+            data_alumnos.DataSource = conexion.leer_alumnos();
         }
     }
 }

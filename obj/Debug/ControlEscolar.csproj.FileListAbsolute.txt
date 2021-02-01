@@ -10,3 +10,4 @@ C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.csproj.Co
 C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.csproj.CopyComplete
 C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.exe
 C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.pdb
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.mostrar_alumnos.resources

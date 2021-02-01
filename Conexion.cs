@@ -16,11 +16,16 @@ namespace ControlEscolar
         //Inicializa el constructor
         public Conexion()
         {
-            conn = new SQLiteConn("contro_escolar.db", true);
+            conn = new SQLiteConn("control_escolar.db", true);
         }
 
         //Cerrar programa
         public void Close() => conn.Close();
+
+        public List<alumnos> leer_alumnos() => conn.leer_alumnos();
+
+        public List<materias> leer_materias() => conn.leer_materias();
+
 
     }
 }
