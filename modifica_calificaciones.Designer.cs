@@ -36,6 +36,7 @@
             this.materia_box = new System.Windows.Forms.ComboBox();
             this.calificacion_box = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.error = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // alumno_box
@@ -112,11 +113,23 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Calificacion";
             // 
+            // error
+            // 
+            this.error.AutoSize = true;
+            this.error.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
+            this.error.ForeColor = System.Drawing.Color.Red;
+            this.error.Location = new System.Drawing.Point(111, 143);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(173, 15);
+            this.error.TabIndex = 8;
+            this.error.Text = "¡Inserte una calificacion valida!";
+            // 
             // modifica_calificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 275);
+            this.Controls.Add(this.error);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.calificacion_box);
             this.Controls.Add(this.materia_box);
@@ -143,5 +156,6 @@
         private System.Windows.Forms.ComboBox materia_box;
         private System.Windows.Forms.TextBox calificacion_box;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label error;
     }
 }

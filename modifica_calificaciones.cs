@@ -17,9 +17,10 @@ namespace ControlEscolar
         {
             InitializeComponent();
             this.conexion = conexion;
+            error.Visible = false;
             //Cargar informacion alumnos
-            alumno_box.DisplayMember = "Matricula";
-            alumno_box.ValueMember = "Nombre";
+            alumno_box.DisplayMember = "Nombre";
+            alumno_box.ValueMember = "Matricula";
             alumno_box.DataSource = conexion.leer_alumnos();
 
             //Cargar informacion materias
@@ -46,6 +47,11 @@ namespace ControlEscolar
                 if (calificacion_>0 && calificacion_<100)
                 {
                     conexion.modificar_calificaciones(Convert.ToInt32(alumno), Convert.ToInt32(materia), calificacion_);
+                }
+                else
+                {
+                    // Si no introdujo una calificacion correcta entonces...
+                    error.Visible = true;
                 }
             }
         }

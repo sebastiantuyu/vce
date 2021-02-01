@@ -89,6 +89,12 @@
     <Compile Include="materias_adeudadas.Designer.cs">
       <DependentUpon>materias_adeudadas.cs</DependentUpon>
     </Compile>
+    <Compile Include="modifica_calificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifica_calificaciones.Designer.cs">
+      <DependentUpon>modifica_calificaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="mostrar_alumnos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="materias_adeudadas.resx">
       <DependentUpon>materias_adeudadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifica_calificaciones.resx">
+      <DependentUpon>modifica_calificaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mostrar_alumnos.resx">
       <DependentUpon>mostrar_alumnos.cs</DependentUpon>
