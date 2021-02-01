@@ -63,6 +63,7 @@
             this.Name = "promedio_parcial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promedio parcial";
+            this.Load += new System.EventHandler(this.promedio_parcial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_promedio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

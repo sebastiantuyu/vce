@@ -66,7 +66,8 @@ namespace ControlEscolar
         // Mostrar promedio parcial de alumnos
         private void promedio_parcial_Click(object sender, EventArgs e)
         {
-
+            promedio_parcial form = new promedio_parcial(conexion);
+            form.ShowDialog();
         }
 
 

@@ -12,14 +12,22 @@ namespace ControlEscolar
 {
     public partial class promedio_parcial : Form
     {
-        public promedio_parcial()
+
+        private Conexion conexion;
+        public promedio_parcial(Conexion conexion)
         {
             InitializeComponent();
+            this.conexion = conexion;
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void promedio_parcial_Load(object sender, EventArgs e)
+        {
+            data_promedio.DataSource = conexion.leer_promedio_parcial();
         }
     }
 }

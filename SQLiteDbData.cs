@@ -112,6 +112,29 @@ namespace SQLiteDb
             return lista_calificaciones;
 
         }
-            
+
+        //Leer el promedio parcial de cada alumno
+        public List<calificaciones> leer_promedio_parcial()
+        {
+            string query = "SELECT ALUMNOS.NOMBRE,ALUMNOS.APELLIDO, "
+                            + "CALIFICACIONES.ALUMNOid AS MATRICULA, "
+                            + "AVG(CALIFICACIONES.CALIFICACION) AS CALIFICACION "
+                            + "FROM CALIFICACIONES "
+                            + "INNER JOIN ALUMNOS ON "
+                            + "(ALUMNOS.MATRICULA = CALIFICACIONES.ALUMNOid) "
+                            + "WHERE CALIFICACION>69 "
+                            + "GROUP BY MATRICULA "
+                            + "ORDER BY CALIFICACION ";
+            List<calificaciones> lista_calificaciones = new List<calificaciones>();
+            using (SQLiteRecordSet rs = ExecuteQuery(query))
+            {
+                while (rs.NextRecord())
+                {
+                    lista_calificaciones.Add(new calificaciones(rs.GetString("NOMBRE"), rs.GetString("APELLIDO"), rs.GetInt32("MATRICULA"), rs.GetDouble("CALIFICACION")));
+                }
+            }
+            return lista_calificaciones;
+
+        }
     }
 }
