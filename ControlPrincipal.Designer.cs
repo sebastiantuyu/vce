@@ -39,6 +39,8 @@
             this.extraordinarios = new System.Windows.Forms.Button();
             this.helper_title = new System.Windows.Forms.Label();
             this.helper_content = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // exit
@@ -71,6 +73,7 @@
             this.materias_existentes.Text = "Materias existentes";
             this.materias_existentes.UseVisualStyleBackColor = true;
             this.materias_existentes.Click += new System.EventHandler(this.materias_existentes_Click);
+            this.materias_existentes.MouseHover += new System.EventHandler(this.materias_existentes_MouseHover);
             // 
             // alta_alumnos
             // 
@@ -81,6 +84,7 @@
             this.alta_alumnos.Text = "Alta de alumnos";
             this.alta_alumnos.UseVisualStyleBackColor = true;
             this.alta_alumnos.Click += new System.EventHandler(this.alta_alumnos_Click);
+            this.alta_alumnos.MouseHover += new System.EventHandler(this.alta_alumnos_MouseHover);
             // 
             // modificar_calificaciones
             // 
@@ -91,6 +95,7 @@
             this.modificar_calificaciones.Text = "Modificar calificaciones";
             this.modificar_calificaciones.UseVisualStyleBackColor = true;
             this.modificar_calificaciones.Click += new System.EventHandler(this.modificar_calificaciones_Click);
+            this.modificar_calificaciones.MouseHover += new System.EventHandler(this.modificar_calificaciones_MouseHover);
             // 
             // promedio_total
             // 
@@ -101,6 +106,7 @@
             this.promedio_total.Text = "Promedio total de alumnos";
             this.promedio_total.UseVisualStyleBackColor = true;
             this.promedio_total.Click += new System.EventHandler(this.promedio_total_Click);
+            this.promedio_total.MouseHover += new System.EventHandler(this.promedio_total_MouseHover);
             // 
             // promedio_parcial
             // 
@@ -111,6 +117,7 @@
             this.promedio_parcial.Text = "Promedio parical de alumnos";
             this.promedio_parcial.UseVisualStyleBackColor = true;
             this.promedio_parcial.Click += new System.EventHandler(this.promedio_parcial_Click);
+            this.promedio_parcial.MouseHover += new System.EventHandler(this.promedio_parcial_MouseHover);
             // 
             // materias_adeudadas
             // 
@@ -121,6 +128,7 @@
             this.materias_adeudadas.Text = "Materias adeudadas";
             this.materias_adeudadas.UseVisualStyleBackColor = true;
             this.materias_adeudadas.Click += new System.EventHandler(this.materias_adeudadas_Click);
+            this.materias_adeudadas.MouseHover += new System.EventHandler(this.materias_adeudadas_MouseHover);
             // 
             // extraordinarios
             // 
@@ -131,12 +139,13 @@
             this.extraordinarios.Text = "Extraordinarios";
             this.extraordinarios.UseVisualStyleBackColor = true;
             this.extraordinarios.Click += new System.EventHandler(this.extraordinarios_Click);
+            this.extraordinarios.MouseHover += new System.EventHandler(this.extraordinarios_MouseHover);
             // 
             // helper_title
             // 
             this.helper_title.AutoSize = true;
             this.helper_title.Font = new System.Drawing.Font("Monotxt_IV25", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helper_title.Location = new System.Drawing.Point(187, 48);
+            this.helper_title.Location = new System.Drawing.Point(169, 48);
             this.helper_title.Name = "helper_title";
             this.helper_title.Size = new System.Drawing.Size(252, 26);
             this.helper_title.TabIndex = 9;
@@ -144,19 +153,40 @@
             // 
             // helper_content
             // 
-            this.helper_content.AutoSize = true;
             this.helper_content.Font = new System.Drawing.Font("Monotxt_IV25", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helper_content.Location = new System.Drawing.Point(189, 90);
+            this.helper_content.Location = new System.Drawing.Point(170, 90);
             this.helper_content.Name = "helper_content";
-            this.helper_content.Size = new System.Drawing.Size(153, 20);
+            this.helper_content.Size = new System.Drawing.Size(296, 153);
             this.helper_content.TabIndex = 10;
-            this.helper_content.Text = "Esta funcion";
+            this.helper_content.Text = "Ubique el mouse sobre el botón para saber más de la función.";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotxt_IV25", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(171, 386);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(257, 14);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Programa desarrollado por";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Monotxt_IV25", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(324, 413);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 14);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Victor Castillo";
             // 
             // ControlPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 451);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.helper_content);
             this.Controls.Add(this.helper_title);
             this.Controls.Add(this.extraordinarios);
@@ -190,6 +220,8 @@
         private System.Windows.Forms.Button extraordinarios;
         private System.Windows.Forms.Label helper_title;
         private System.Windows.Forms.Label helper_content;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

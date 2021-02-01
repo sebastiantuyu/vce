@@ -87,10 +87,45 @@ namespace ControlEscolar
             form.ShowDialog();
         }
 
-        //Muestra texto de ayuda: alumnos existentes
+        //Muestra texto de ayuda
         private void alumnos_existentes_MouseHover(object sender, EventArgs e)
         {
-            helper_content.Text = "Esta funcion muestra a todos los alumnos organizados por matricula";
+            helper_content.Text = "Muestra a todos los alumnos organizados por matricula";
+        }
+
+        private void materias_existentes_MouseHover(object sender, EventArgs e)
+        {
+            helper_content.Text = "Muestra todas las materias organizadas por clave";
+        }
+
+        private void alta_alumnos_MouseHover(object sender, EventArgs e)
+        {
+            helper_content.Text = "Permite dar de alta a alumnos nuevos";
+        }
+
+        private void modificar_calificaciones_MouseHover(object sender, EventArgs e)
+        {
+            helper_content.Text = "Permite modificar las calificaciones de los alumnos";
+        }
+
+        private void promedio_total_MouseHover(object sender, EventArgs e)
+        {
+            helper_content.Text = "Regresa el promedio total de los alumnos";
+        }
+
+        private void promedio_parcial_MouseHover(object sender, EventArgs e)
+        {
+            helper_content.Text = "Regresa el promedio parcial de los alumnos";
+        }
+
+        private void materias_adeudadas_MouseHover(object sender, EventArgs e)
+        {
+            helper_content.Text = "Muestra los alumnos que tienen materias adeudadas";
+        }
+
+        private void extraordinarios_MouseHover(object sender, EventArgs e)
+        {
+            helper_content.Text = "Muestra la cantidad de alumnos que debieron cada materia";
         }
     }
 }
