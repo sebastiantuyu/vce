@@ -12,9 +12,16 @@ namespace ControlEscolar
 {
     public partial class ControlPrincipal : Form
     {
+
+        private Conexion conection;
         public ControlPrincipal()
         {
             InitializeComponent();
+            //Hacemos la conexion con la base de datos
+            conection = new Conexion();
         }
+
+        // Controles basicos: cerrar programa
+
     }
 }

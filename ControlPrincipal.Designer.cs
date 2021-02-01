@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(506, 12);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(75, 23);
+            this.exit.TabIndex = 0;
+            this.exit.Text = "Salir";
+            this.exit.UseVisualStyleBackColor = true;
             // 
             // ControlPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 450);
+            this.Controls.Add(this.exit);
+            this.MaximizeBox = false;
             this.Name = "ControlPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control Escolar";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button exit;
     }
 }
 
