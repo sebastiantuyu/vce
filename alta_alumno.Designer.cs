@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.name_box = new System.Windows.Forms.TextBox();
+            this.nombre_box = new System.Windows.Forms.TextBox();
             this.apellido_box = new System.Windows.Forms.TextBox();
             this.matricula_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,13 +38,13 @@
             this.agregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // name_box
+            // nombre_box
             // 
-            this.name_box.Location = new System.Drawing.Point(110, 87);
-            this.name_box.Name = "name_box";
-            this.name_box.Size = new System.Drawing.Size(100, 20);
-            this.name_box.TabIndex = 0;
-            this.name_box.TextChanged += new System.EventHandler(this.name_box_TextChanged);
+            this.nombre_box.Location = new System.Drawing.Point(110, 87);
+            this.nombre_box.Name = "nombre_box";
+            this.nombre_box.Size = new System.Drawing.Size(100, 20);
+            this.nombre_box.TabIndex = 0;
+            this.nombre_box.TextChanged += new System.EventHandler(this.name_box_TextChanged);
             // 
             // apellido_box
             // 
@@ -110,6 +110,7 @@
             this.agregar.TabIndex = 7;
             this.agregar.Text = "Agregar";
             this.agregar.UseVisualStyleBackColor = true;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
             // alta_alumno
             // 
@@ -123,7 +124,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.matricula_box);
             this.Controls.Add(this.apellido_box);
-            this.Controls.Add(this.name_box);
+            this.Controls.Add(this.nombre_box);
             this.MaximizeBox = false;
             this.Name = "alta_alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -135,7 +136,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox name_box;
+        private System.Windows.Forms.TextBox nombre_box;
         private System.Windows.Forms.TextBox apellido_box;
         private System.Windows.Forms.TextBox matricula_box;
         private System.Windows.Forms.Label label1;

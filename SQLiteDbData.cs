@@ -149,6 +149,7 @@ namespace SQLiteDb
 
         }
 
+        //Leer las materias que tienen alumnos reprobados en ellas
         public List<materia> leer_extraordinarios()
         {
             string query = "SELECT MATERIAS.MATERIA AS MATERIA, "
@@ -169,7 +170,8 @@ namespace SQLiteDb
             }
             return lista_materia;
         }
- 
+        
+        //Leer las materias que ha reprobado un alumno dependiendo de la matricula
         public List<materia> leer_materias_adeudadas(int matricula)
         {
             string query = "SELECT MATERIAS.MATERIA AS MATERIA, "
@@ -191,6 +193,44 @@ namespace SQLiteDb
                 }
             }
             return lista_materia;
+        }
+
+        public bool agregar_alumno(string nombre, string apellido, int matricula)
+        {
+
+            string query = "INSERT INTO ALUMNOS (NOMBRE,APELLIDO,MATRICULA) "
+                            + "VALUES( "
+                            + $"'{nombre}', "
+                            + $"'{apellido}', "
+                            + $"{matricula} "
+                            + ") ";
+            ExecuteNonQuery(query);
+            //Agrega automaticamente todas sus calificaciones en -1
+            if (default_calificaciones(matricula))
+            {            
+                //Si se agregan correctamente las califiaciones (devuelve verdadero)
+                //Entonces ejecuta verdadero
+                return true;
+            }
+            return false;
+        }
+
+        private bool default_calificaciones(int matricula)
+        {
+            string query = "INSERT INTO CALIFICACIONES(ALUMNOid,MATERIAid,CALIFICACION) "
+                            + "VALUES "
+                            + $"/* MICROCONT  */    ({matricula}, 37158, -1), "
+                            + $"/* ROBOTICA   */    ({matricula}, 37965, -1), "
+                            + $"/* CALCULO    */    ({matricula}, 42295, -1), "
+                            + $"/* MECANISMOS */    ({matricula}, 45865, -1), "
+                            + $"/* SISTEMASD  */    ({matricula}, 49201, -1), "
+                            + $"/* VIBRACION  */    ({matricula}, 68799, -1), "
+                            + $"/* QUIMICA    */    ({matricula}, 77455, -1), "
+                            + $"/* PROGRAMAC  */    ({matricula}, 87615, -1), "
+                            + $"/* ALGEBRA    */    ({matricula}, 93806, -1), "
+                            + $"/* CONTROL    */    ({matricula}, 97346, -1) ";
+            ExecuteNonQuery(query);
+            return true;
         }
     }
 }

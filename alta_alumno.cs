@@ -12,9 +12,11 @@ namespace ControlEscolar
 {
     public partial class alta_alumno : Form
     {
-        public alta_alumno()
+        private Conexion conexion;
+        public alta_alumno(Conexion conexion)
         {
             InitializeComponent();
+            this.conexion = conexion;
         }
 
         private void name_box_TextChanged(object sender, EventArgs e)
@@ -24,6 +26,20 @@ namespace ControlEscolar
 
         private void label3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void agregar_Click(object sender, EventArgs e)
+        {
+            //Nombre, apellido, matricula
+            string nombre = nombre_box.Text;
+            string apellido = apellido_box.Text;
+            string matricula = matricula_box.Text;
+            // Comprueba que todos los campos esten llenos            
+            if (!String.IsNullOrEmpty(nombre) && !String.IsNullOrEmpty(apellido) && !String.IsNullOrEmpty(matricula))
+            {
+             conexion.agregar_alumno(nombre, apellido, Convert.ToInt32(matricula));
+            }
 
         }
     }
