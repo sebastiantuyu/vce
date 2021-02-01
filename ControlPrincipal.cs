@@ -40,6 +40,8 @@ namespace ControlEscolar
         //Mostrar materias existentes ordenadas por clave
         private void materias_existentes_Click(object sender, EventArgs e)
         {
+            mostrar_materias form = new mostrar_materias(conexion);
+            form.ShowDialog();
         }
 
         // Dar de alta un alumno

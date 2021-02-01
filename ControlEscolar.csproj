@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="alta_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alta_alumno.Designer.cs">
+      <DependentUpon>alta_alumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="ControlPrincipal.cs">
       <SubType>Form</SubType>
@@ -77,15 +83,45 @@
     <Compile Include="mostrar_alumnos.Designer.cs">
       <DependentUpon>mostrar_alumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="mostrar_materias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mostrar_materias.Designer.cs">
+      <DependentUpon>mostrar_materias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="promedio_parcial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="promedio_parcial.Designer.cs">
+      <DependentUpon>promedio_parcial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="promedio_total.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="promedio_total.Designer.cs">
+      <DependentUpon>promedio_total.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLiteDb.cs" />
     <Compile Include="SQLiteDbData.cs" />
+    <EmbeddedResource Include="alta_alumno.resx">
+      <DependentUpon>alta_alumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlPrincipal.resx">
       <DependentUpon>ControlPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mostrar_alumnos.resx">
       <DependentUpon>mostrar_alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mostrar_materias.resx">
+      <DependentUpon>mostrar_materias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="promedio_parcial.resx">
+      <DependentUpon>promedio_parcial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="promedio_total.resx">
+      <DependentUpon>promedio_total.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
