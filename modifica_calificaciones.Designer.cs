@@ -140,6 +140,7 @@
             this.Controls.Add(this.alumno_box);
             this.MaximizeBox = false;
             this.Name = "modifica_calificaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asigna calificaciones";
             this.ResumeLayout(false);
             this.PerformLayout();

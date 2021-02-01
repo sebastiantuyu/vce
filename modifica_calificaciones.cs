@@ -36,8 +36,8 @@ namespace ControlEscolar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string alumno = (string)alumno_box.SelectedValue;
-            string materia = (string)materia_box.SelectedValue;
+            string alumno = alumno_box.SelectedValue.ToString();
+            string materia = materia_box.SelectedValue.ToString();
             string calificacion = calificacion_box.Text;
             int calificacion_ = Convert.ToInt32(calificacion);
             //Si todos los campos estan llenos entonces...
@@ -46,7 +46,15 @@ namespace ControlEscolar
                 // Si la calificacion es un numero valido entonces ...
                 if (calificacion_>0 && calificacion_<100)
                 {
-                    conexion.modificar_calificaciones(Convert.ToInt32(alumno), Convert.ToInt32(materia), calificacion_);
+                    if(conexion.modificar_calificaciones(Convert.ToInt32(alumno), Convert.ToInt32(materia), calificacion_))
+                    {
+                        MessageBox.Show("Calificacion agregada correctamente","Informacion",MessageBoxButtons.OK);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Problemas agregando la calificacion", "Informacion", MessageBoxButtons.OK);
+                    }
                 }
                 else
                 {
