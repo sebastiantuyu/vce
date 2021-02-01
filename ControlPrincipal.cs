@@ -54,7 +54,8 @@ namespace ControlEscolar
         // Modificar calificaciones de un alumno
         private void modificar_calificaciones_Click(object sender, EventArgs e)
         {
-
+            modifica_calificaciones form = new modifica_calificaciones(conexion);
+            form.ShowDialog();
         }
 
         // Mostrar promedio total de alumnos

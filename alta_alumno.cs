@@ -41,7 +41,12 @@ namespace ControlEscolar
             {
              if(conexion.agregar_alumno(nombre, apellido, Convert.ToInt32(matricula)))
                 {
-                    MessageBox.Show("Alumno agreado correctamente", "Estado", MessageBoxButtons.OK);
+                    MessageBox.Show("Alumno agreado correctamente", "Informacion", MessageBoxButtons.OK);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error agregando alumno", "Informacion", MessageBoxButtons.OK);
                     Close();
                 }
             }

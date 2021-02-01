@@ -215,6 +215,17 @@ namespace SQLiteDb
             return false;
         }
 
+        public bool modificar_calificaciones(int matricula, int clave, int calificacion)
+        {
+            string query = "INSERT INTO CALIFICACIONES(ALUMNOid,MATERIAid,CALIFICACION) "
+                            +"VALUES "
+                            +$"({matricula}, {clave}, {calificacion}) ";
+            ExecuteNonQuery(query);
+            return true;
+        }
+
+        // Genera un metodo que agrega calificaciones a un alumno recien creado
+        // Y las pone todas en -1
         private bool default_calificaciones(int matricula)
         {
             string query = "INSERT INTO CALIFICACIONES(ALUMNOid,MATERIAid,CALIFICACION) "
@@ -232,5 +243,7 @@ namespace SQLiteDb
             ExecuteNonQuery(query);
             return true;
         }
+        
+        
     }
 }

@@ -35,5 +35,7 @@ namespace ControlEscolar
         public List<materia> leer_materias_adeudadas(int matricula) => conn.leer_materias_adeudadas(matricula);
 
         public bool agregar_alumno(string nombre, string apellido, int matricula) => conn.agregar_alumno(nombre,apellido,matricula);
+        
+        public bool modificar_calificaciones(int matricula, int clave, int calificacion) => conn.modificar_calificaciones(matricula,clave,calificacion);
     }
 }
