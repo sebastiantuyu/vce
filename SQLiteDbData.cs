@@ -169,5 +169,28 @@ namespace SQLiteDb
             }
             return lista_materia;
         }
+ 
+        public List<materia> leer_materias_adeudadas(int matricula)
+        {
+            string query = "SELECT MATERIAS.MATERIA AS MATERIA, "
+                            + "CALIFICACIONES.CALIFICACION AS CALIFICACION "
+                            + "FROM ALUMNOS "
+                            + "INNER JOIN CALIFICACIONES ON "
+                            + "(CALIFICACIONES.ALUMNOid = ALUMNOS.MATRICULA) "
+                            + "INNER JOIN MATERIAS ON "
+                            + "(CALIFICACIONES.MATERIAid = MATERIAS.CLAVE) "
+                            + "WHERE CALIFICACIONES.CALIFICACION < 69 "
+                            + "AND CALIFICACIONES.CALIFICACION > 0 "
+                            + $"AND ALUMNOS.MATRICULA = {matricula}";
+            List<materia> lista_materia = new List<materia>();
+            using (SQLiteRecordSet rs = ExecuteQuery(query))
+            {
+                while (rs.NextRecord())
+                {
+                    lista_materia.Add(new materia(rs.GetString("MATERIA"), rs.GetInt32("EXTRAORDINARIOS")));
+                }
+            }
+            return lista_materia;
+        }
     }
 }

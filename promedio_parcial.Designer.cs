@@ -38,6 +38,7 @@
             this.data_promedio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_promedio.Location = new System.Drawing.Point(36, 91);
             this.data_promedio.Name = "data_promedio";
+            this.data_promedio.ReadOnly = true;
             this.data_promedio.Size = new System.Drawing.Size(193, 125);
             this.data_promedio.TabIndex = 0;
             // 

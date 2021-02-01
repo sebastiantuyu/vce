@@ -74,7 +74,8 @@ namespace ControlEscolar
         //Mostrar materias adeudadas por alumno
         private void materias_adeudadas_Click(object sender, EventArgs e)
         {
-
+            materias_adeudadas form = new materias_adeudadas(conexion);
+            form.ShowDialog();
         }
 
         //Mostrar extraordinarios

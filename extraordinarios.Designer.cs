@@ -38,6 +38,7 @@
             this.data_extra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_extra.Location = new System.Drawing.Point(29, 99);
             this.data_extra.Name = "data_extra";
+            this.data_extra.ReadOnly = true;
             this.data_extra.Size = new System.Drawing.Size(240, 150);
             this.data_extra.TabIndex = 0;
             // 

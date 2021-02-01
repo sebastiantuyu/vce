@@ -12,9 +12,24 @@ namespace ControlEscolar
 {
     public partial class materias_adeudadas : Form
     {
-        public materias_adeudadas()
+        private Conexion conexion;
+        public materias_adeudadas(Conexion conexion)
         {
             InitializeComponent();
+            this.conexion = conexion;
+            data_alumnos.ValueMember = "Matricula";
+            data_alumnos.DisplayMember = "Nombre";
+            data_alumnos.DataSource = conexion.leer_alumnos();
+        }
+
+        private void materias_adeudadas_Load(object sender, EventArgs e)
+        {
+        //  data_materias.DataSource = conexion.leer_materias_adeudadas();
+        }
+
+        private void obtener_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
