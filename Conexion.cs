@@ -9,7 +9,7 @@ using SQLiteDb;
 namespace ControlEscolar
 {
 
-    class Conexion
+    public class Conexion
     {
 
         private SQLiteConn conn;

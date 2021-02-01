@@ -71,11 +71,21 @@
     <Compile Include="ControlPrincipal.Designer.cs">
       <DependentUpon>ControlPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="mostrar_alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mostrar_alumnos.Designer.cs">
+      <DependentUpon>mostrar_alumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLiteDb.cs" />
+    <Compile Include="SQLiteDbData.cs" />
     <EmbeddedResource Include="ControlPrincipal.resx">
       <DependentUpon>ControlPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mostrar_alumnos.resx">
+      <DependentUpon>mostrar_alumnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -12,9 +12,17 @@ namespace ControlEscolar
 {
     public partial class mostrar_alumnos : Form
     {
-        public mostrar_alumnos()
+        private Conexion conexion;
+
+        public mostrar_alumnos(Conexion conexion)
         {
             InitializeComponent();
+            this.conexion = conexion;
+        }
+
+        private void mostrar_alumnos_Load(object sender, EventArgs e)
+        {
+            data_alumnos.DataSource = conexion.obtener_alumnos();
         }
     }
 }

@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.data_alumnos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.data_alumnos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // data_alumnos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 65);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(455, 374);
-            this.dataGridView1.TabIndex = 0;
+            this.data_alumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_alumnos.Location = new System.Drawing.Point(12, 65);
+            this.data_alumnos.Name = "data_alumnos";
+            this.data_alumnos.Size = new System.Drawing.Size(455, 374);
+            this.data_alumnos.TabIndex = 0;
             // 
             // mostrar_alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 451);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.data_alumnos);
             this.Name = "mostrar_alumnos";
             this.Text = "mostrar_alumnos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.mostrar_alumnos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.data_alumnos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView data_alumnos;
     }
 }

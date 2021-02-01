@@ -13,19 +13,19 @@ namespace ControlEscolar
     public partial class ControlPrincipal : Form
     {
 
-        private Conexion conection;
+        private Conexion conexion;
         public ControlPrincipal()
         {
             InitializeComponent();
             //Hacemos la conexion con la base de datos
-            conection = new Conexion();
+            conexion = new Conexion();
         }
 
         // Controles basicos: cerrar programa
         private void exit_Click(object sender, EventArgs e)
         {
             //Cerrar conexion base de datos
-            conection.Close();
+            conexion.Close();
             // Cerrar programa
             Close();
         }
@@ -33,7 +33,8 @@ namespace ControlEscolar
         //Mostrar alumnos existentes ordenados por matricula
         private void alumnos_existentes_Click(object sender, EventArgs e)
         {
-
+            mostrar_alumnos form = new mostrar_alumnos(conexion);
+            form.ShowDialog();
         }
 
         //Mostrar materias existentes ordenadas por clave
