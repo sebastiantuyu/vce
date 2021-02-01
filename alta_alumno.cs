@@ -39,7 +39,11 @@ namespace ControlEscolar
             // Comprueba que todos los campos esten llenos            
             if (!String.IsNullOrEmpty(nombre) && !String.IsNullOrEmpty(apellido) && !String.IsNullOrEmpty(matricula))
             {
-             conexion.agregar_alumno(nombre, apellido, Convert.ToInt32(matricula));
+             if(conexion.agregar_alumno(nombre, apellido, Convert.ToInt32(matricula)))
+                {
+                    MessageBox.Show("Alumno agreado correctamente", "Estado", MessageBoxButtons.OK);
+                    Close();
+                }
             }
             else {
                 //Si no estan llenos, muestra el aviso de error en pantalla 
