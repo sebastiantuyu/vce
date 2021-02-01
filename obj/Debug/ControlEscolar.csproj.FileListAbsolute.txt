@@ -1,0 +1,12 @@
+C:\Users\74014312\source\repos\ControlEscolar\bin\Debug\ControlEscolar.exe.config
+C:\Users\74014312\source\repos\ControlEscolar\bin\Debug\ControlEscolar.exe
+C:\Users\74014312\source\repos\ControlEscolar\bin\Debug\ControlEscolar.pdb
+C:\Users\74014312\source\repos\ControlEscolar\bin\Debug\System.Data.SQLite.dll
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.csprojAssemblyReference.cache
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.ControlPrincipal.resources
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.Properties.Resources.resources
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.csproj.GenerateResource.cache
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.csproj.CoreCompileInputs.cache
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.csproj.CopyComplete
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.exe
+C:\Users\74014312\source\repos\ControlEscolar\obj\Debug\ControlEscolar.pdb
