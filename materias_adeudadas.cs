@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLiteDb;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,12 +25,16 @@ namespace ControlEscolar
 
         private void materias_adeudadas_Load(object sender, EventArgs e)
         {
-        //  data_materias.DataSource = conexion.leer_materias_adeudadas();
         }
 
         private void obtener_Click(object sender, EventArgs e)
         {
+            data_materias.DataSource = conexion.leer_materias_adeudadas((int)data_alumnos.SelectedValue);
+        }
 
+        private void data_alumnos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            matricula.Text = data_alumnos.SelectedValue.ToString();    
         }
     }
 }

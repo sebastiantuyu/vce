@@ -187,7 +187,7 @@ namespace SQLiteDb
             {
                 while (rs.NextRecord())
                 {
-                    lista_materia.Add(new materia(rs.GetString("MATERIA"), rs.GetInt32("EXTRAORDINARIOS")));
+                    lista_materia.Add(new materia(rs.GetString("MATERIA"), rs.GetInt32("CALIFICACION")));
                 }
             }
             return lista_materia;

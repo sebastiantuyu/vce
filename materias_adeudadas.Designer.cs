@@ -31,7 +31,7 @@
             this.data_materias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.data_alumnos = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.matricula = new System.Windows.Forms.Label();
             this.obtener = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_materias)).BeginInit();
             this.SuspendLayout();
@@ -61,16 +61,17 @@
             this.data_alumnos.Name = "data_alumnos";
             this.data_alumnos.Size = new System.Drawing.Size(121, 21);
             this.data_alumnos.TabIndex = 2;
+            this.data_alumnos.SelectedIndexChanged += new System.EventHandler(this.data_alumnos_SelectedIndexChanged);
             // 
-            // label2
+            // matricula
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "A00000000";
+            this.matricula.AutoSize = true;
+            this.matricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matricula.Location = new System.Drawing.Point(35, 73);
+            this.matricula.Name = "matricula";
+            this.matricula.Size = new System.Drawing.Size(81, 18);
+            this.matricula.TabIndex = 3;
+            this.matricula.Text = "A00000000";
             // 
             // obtener
             // 
@@ -88,7 +89,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 278);
             this.Controls.Add(this.obtener);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.matricula);
             this.Controls.Add(this.data_alumnos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.data_materias);
@@ -108,7 +109,7 @@
         private System.Windows.Forms.DataGridView data_materias;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox data_alumnos;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label matricula;
         private System.Windows.Forms.Button obtener;
     }
 }
